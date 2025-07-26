@@ -126,6 +126,75 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* Examples Section */}
+      <section id="esempi" className="py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl lg:text-4xl font-bold text-text-primary mb-4">
+              Esempi del Nostro Lavoro
+            </h3>
+            <p className="text-xl text-text-subtle max-w-2xl mx-auto">
+              Scopri alcuni dei nostri lavori più belli. Ogni taglio e colore è realizzato 
+              con passione e professionalità per esaltare la bellezza unica di ogni cliente.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div className="aspect-square relative">
+                  <img 
+                    src="https://customer-assets.emergentagent.com/job_pizzolotto-hair/artifacts/vn84d31a_haircut%201.png"
+                    alt="Taglio bob moderno con colpi di sole"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h4 className="text-xl font-semibold text-text-primary mb-3">
+                    Bob Moderno con Colpi di Sole
+                  </h4>
+                  <p className="text-text-subtle">
+                    Un elegante taglio bob con bellissimi colpi di sole che creano profondità 
+                    e movimento. Perfetto per chi desidera un look sofisticato e contemporaneo.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="space-y-8">
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div className="aspect-square relative">
+                  <img 
+                    src="https://customer-assets.emergentagent.com/job_pizzolotto-hair/artifacts/vvhp9n9t_haircut%202.png"
+                    alt="Capelli lunghi con balayage naturale"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h4 className="text-xl font-semibold text-text-primary mb-3">
+                    Balayage Naturale su Capelli Lunghi
+                  </h4>
+                  <p className="text-text-subtle">
+                    Splendidi capelli lunghi con tecnica balayage che dona un effetto naturale 
+                    e luminoso. I riflessi miele e dorati creano un risultato armonioso e raffinato.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-lg text-text-subtle mb-6">
+              Questi sono solo alcuni esempi del nostro lavoro. Ogni cliente riceve un trattamento 
+              personalizzato per ottenere il look perfetto.
+            </p>
+            <Button className="bg-accent-primary hover:bg-accent-primary/90 text-white">
+              Prenota la Tua Consulenza
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="chi-siamo" className="bg-surface-cream py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
