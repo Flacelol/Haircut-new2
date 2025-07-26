@@ -66,9 +66,17 @@ const LandingPage = () => {
               <a href="#contatti" className="text-text-primary hover:text-accent-primary transition-colors">
                 Contatti
               </a>
-              <Button className="bg-accent-primary hover:bg-accent-primary/90 text-white">
-                Prenota Ora
-              </Button>
+              <div className="px-4">
+                <a 
+                  href="tel:+390495993847" 
+                  className="block w-full"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <Button className="bg-accent-primary hover:bg-accent-primary/90 text-white w-full">
+                    Prenota Ora
+                  </Button>
+                </a>
+              </div>
             </nav>
 
             {/* Mobile menu button */}
@@ -127,10 +135,16 @@ const LandingPage = () => {
                 >
                   Contatti
                 </a>
-                <div className="px-4">
-                  <Button className="bg-accent-primary hover:bg-accent-primary/90 text-white w-full">
-                    Prenota Ora
-                  </Button>
+               <div className="px-4">
+                  <a 
+                    href="tel:+390495993847" 
+                    className="w-full block"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Button className="bg-accent-primary hover:bg-accent-primary/90 text-white w-full">
+                      Prenota Ora
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
