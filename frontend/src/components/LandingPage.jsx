@@ -8,6 +8,13 @@ import { mockData } from '../utils/mock';
 const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const getCurrentDay = () => {
+  const days = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
+  return days[new Date().getDay()];
+};
+
+const currentDay = getCurrentDay();
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -135,21 +142,6 @@ const LandingPage = () => {
                 <span className="text-text-subtle">4.8/5 • 60+ recensioni</span>
               </div>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="flex items-center justify-center space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <CheckCircle className="w-6 h-6 text-green-600" />
-                <span className="text-text-primary font-medium">Accessibile</span>
-              </div>
-              <div className="flex items-center justify-center space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <Car className="w-6 h-6 text-accent-primary" />
-                <span className="text-text-primary font-medium">Parcheggio Disponibile</span>
-              </div>
-              <div className="flex items-center justify-center space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <Baby className="w-6 h-6 text-accent-primary" />
-                <span className="text-text-primary font-medium">Adatto ai Bambini</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -247,9 +239,6 @@ const LandingPage = () => {
               Questi sono solo alcuni esempi del nostro lavoro. Ogni cliente riceve un trattamento 
               personalizzato per ottenere il look perfetto.
             </p>
-            <Button className="bg-accent-primary hover:bg-accent-primary/90 text-white">
-              Prenota la Tua Consulenza
-            </Button>
           </div>
         </div>
       </section>
@@ -394,32 +383,44 @@ const LandingPage = () => {
             <Card className="p-8">
               <h4 className="text-2xl font-bold text-text-primary mb-6">Orari di Apertura</h4>
               <div className="space-y-4">
-                {mockData.hours.map((day, index) => (
-                  <div key={index} className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="font-medium text-text-primary">{day.day}</span>
-                    <span className={`${day.hours === 'Chiuso' ? 'text-red-500' : 'text-text-subtle'}`}>
-                      {day.hours}
-                    </span>
-                  </div>
-                ))}
-              </div>
+  {mockData.hours.map((day, index) => {
+    const isToday = day.day === currentDay;
+
+    return (
+      <div
+        key={index}
+        className={`flex justify-between items-center py-2 border-b border-gray-100 rounded-md px-3 ${
+          isToday ? 'bg-[#61525a] text-white font-semibold shadow-sm' : ''
+        }`}
+      >
+        <span className="font-medium">
+          {day.day}
+          {isToday && (
+            <span className="ml-2 text-xs bg-white/20 text-white px-2 py-0.5 rounded-full">
+              oggi
+            </span>
+          )}
+        </span>
+        <span className={`${day.hours === 'Chiuso' ? (isToday ? 'text-white/80' : 'text-red-500') : ''}`}>
+          {day.hours}
+        </span>
+      </div>
+    );
+  })}
+</div>
+
+
               
-              <div className="mt-8 p-4 bg-accent-light rounded-lg">
-                <div className="flex items-center space-x-2 mb-2">
-                  <Clock className="w-5 h-5 text-accent-primary" />
-                  <span className="font-semibold text-text-primary">Nota Importante</span>
-                </div>
-                <p className="text-sm text-text-subtle">
-                  Si consiglia di prenotare in anticipo. Gli appuntamenti possono essere 
-                  facilmente prenotati online tramite la piattaforma Fresha.
-                </p>
-              </div>
             </Card>
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-accent-primary hover:bg-accent-primary/90 text-white">
-              Prenota il Tuo Appuntamento
+            <Button
+              size="lg"
+              className="bg-accent-primary hover:bg-accent-primary/90 text-white"
+              onClick={() => window.open('tel:+390495993847')}
+            >
+              Chiamaci Per Prenotare
             </Button>
           </div>
         </div>
@@ -434,7 +435,7 @@ const LandingPage = () => {
                 <div className="w-10 h-10 bg-accent-primary rounded-full flex items-center justify-center">
                   <Scissors className="w-5 h-5 text-white" />
                 </div>
-                <h5 className="text-xl font-bold">Pizzolotto Orianna</h5>
+                <h5 className="text-xl font-bold text-black">Pizzolotto Orianna</h5>
               </div>
               <p className="text-gray-300">
                 Il tuo salone di bellezza di fiducia a Onara, Tombolo. 
@@ -443,7 +444,7 @@ const LandingPage = () => {
             </div>
             
             <div>
-              <h6 className="text-lg font-semibold mb-4">Servizi</h6>
+              <h6 className="text-lg font-semibold mb-4 text-black">Servizi</h6>
               <ul className="space-y-2 text-gray-300">
                 <li>Tagli Donna e Uomo</li>
                 <li>Colorazione Capelli</li>
@@ -454,7 +455,7 @@ const LandingPage = () => {
             </div>
             
             <div>
-              <h6 className="text-lg font-semibold mb-4">Contatti</h6>
+              <h6 className="text-lg font-semibold mb-4 text-black">Contatti</h6>
               <div className="space-y-2 text-gray-300">
                 <div>Via dei Carraresi 8 / 8B</div>
                 <div>35019 Tombolo (PD), Italia</div>

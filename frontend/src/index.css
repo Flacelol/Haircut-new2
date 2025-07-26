@@ -104,3 +104,6 @@
     border-color: #5f9dff;
   }
 }
+#emergent-badge {
+  display: none !important;
+}
