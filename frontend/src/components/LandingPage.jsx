@@ -67,7 +67,7 @@ const currentDay = getCurrentDay();
 
           {/* Mobile menu */}
           {isMenuOpen && (
-            <div className="md:hidden bg-white border-t border-gray-200 py-4">
+            <div className="md:hidden bg-white border-t border-black-200 py-4">
               <div className="flex flex-col space-y-4">
                 <a 
                   href="#servizi" 
@@ -130,9 +130,12 @@ const currentDay = getCurrentDay();
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Button size="lg" className="bg-accent-primary hover:bg-accent-primary/90 text-white">
+              <a 
+                href="tel:+390495993847" 
+                className="bg-accent-primary hover:bg-accent-primary/90 text-white text-lg font-medium rounded-md px-8 py-2 h-11 inline-flex items-center justify-center transition-colors"
+              >
                 Prenota Appuntamento
-              </Button>
+              </a>
               <div className="flex items-center space-x-2">
                 <div className="flex items-center">
                   {[...Array(5)].map((_, i) => (
