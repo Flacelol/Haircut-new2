@@ -1,4 +1,4 @@
-import { Scissors, Palette, Sparkles, User, CheckCircle, Car, CreditCard, Baby, Users, Wheelchair } from 'lucide-react';
+import { Scissors, Palette, Sparkles, User, CheckCircle, Car, CreditCard, Baby, Users, Accessibility } from 'lucide-react';
 
 export const mockData = {
   services: [
