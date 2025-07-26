@@ -359,10 +359,17 @@ const LandingPage = () => {
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <MapPin className="w-6 h-6 text-accent-primary mt-1" />
-                  <div>
+                  <div className="flex-1">
                     <div className="font-semibold text-text-primary">Indirizzo</div>
                     <div className="text-text-subtle">Via dei Carraresi 8 / 8B</div>
-                    <div className="text-text-subtle">35019 Tombolo (PD), Italia</div>
+                    <div className="text-text-subtle mb-3">35019 Tombolo (PD), Italia</div>
+                    <Button 
+                      className="bg-accent-primary hover:bg-accent-primary/90 text-white text-sm px-4 py-2"
+                      onClick={() => window.open('https://maps.google.com/maps?q=Via+dei+Carraresi+8,+35019+Tombolo+PD,+Italia', '_blank')}
+                    >
+                      <MapPin className="w-4 h-4 mr-2" />
+                      Visualizza su Google Maps
+                    </Button>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
