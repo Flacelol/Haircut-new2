@@ -81,7 +81,7 @@ const LandingPage = () => {
 
             {/* Mobile menu button */}
             <button 
-              ref={buttonRef}  // Добавьте этот ref
+              ref={buttonRef} 
               className="md:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Menu"
@@ -97,7 +97,7 @@ const LandingPage = () => {
           {/* Mobile menu */}
           {isMenuOpen && (
             <div 
-              ref={menuRef}  // Добавьте этот ref
+              ref={menuRef}  
               className="md:hidden bg-white border-t border-black-200 py-4">
               <div className="flex flex-col space-y-4">
                 <a 
