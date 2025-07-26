@@ -1,34 +1,152 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* DB Brand Colors and Typography Implementation */
+:root {
+  /* Primary Brand Colors */
+  --accent-primary: #61525a;
+  --accent-tab: #61525a;
+  --accent-line-solid: #5f9dff;
+  --accent-line: #5f9dff66;
+  --accent-light: #f0f0f2;
+  
+  /* Text Colors */
+  --text-primary: #1e1919;
+  --text-dark: white;
+  --text-base: #1a1918;
+  --text-subtle-light: #736c64;
+  --text-subtle-dark: #bbb5ae;
+  
+  /* Surface Colors */
+  --surface-background-dark: #1e1919;
+  --surface-cream: #f7f5f2;
+  --white: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Apply custom CSS classes */
+.text-text-primary {
+  color: var(--text-primary);
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.text-text-subtle {
+  color: var(--text-subtle-light);
 }
 
-.App-link {
-    color: #61dafb;
+.bg-accent-primary {
+  background-color: var(--accent-primary);
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.bg-accent-light {
+  background-color: var(--accent-light);
+}
+
+.bg-surface-cream {
+  background-color: var(--surface-cream);
+}
+
+.text-accent-primary {
+  color: var(--accent-primary);
+}
+
+/* Custom Font Implementation */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Scale */
+h1 {
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+/* Interactive Elements */
+.App {
+  min-height: 100vh;
+}
+
+/* Smooth transitions for interactive elements */
+button, .card, a {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a3f45;
 }
