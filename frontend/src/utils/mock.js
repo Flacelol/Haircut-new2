@@ -49,7 +49,7 @@ export const mockData = {
   features: [
     {
       name: "Ingresso accessibile in sedia a rotelle",
-      icon: <Wheelchair className="w-4 h-4 text-accent-primary" />
+      icon: <Accessibility className="w-4 h-4 text-accent-primary" />
     },
     {
       name: "Parcheggio accessibile",
