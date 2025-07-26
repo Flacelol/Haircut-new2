@@ -56,11 +56,12 @@ const currentDay = getCurrentDay();
             <button 
               className="md:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Menu"
             >
               <div className="w-6 h-6 flex flex-col justify-center space-y-1">
-                <div className="w-full h-0.5 bg-text-primary"></div>
-                <div className="w-full h-0.5 bg-text-primary"></div>
-                <div className="w-full h-0.5 bg-text-primary"></div>
+                <div className="w-full h-0.5 bg-black"></div>
+                <div className="w-full h-0.5 bg-black"></div>
+                <div className="w-full h-0.5 bg-black"></div>
               </div>
             </button>
           </div>
