@@ -126,7 +126,7 @@ export const mockData = {
     { day: "Mercoledì", hours: "08:30 - 19:00" },
     { day: "Giovedì", hours: "08:30 - 19:00" },
     { day: "Venerdì", hours: "08:30 - 19:00" },
-    { day: "Sabato", hours: "08:30 - 17:00" },
+    { day: "Sabato", hours: "08:30 - 18:00" },
     { day: "Domenica", hours: "Chiuso" }
   ]
 };
