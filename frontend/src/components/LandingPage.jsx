@@ -475,7 +475,7 @@ const LandingPage = () => {
                 <div className="w-10 h-10 bg-accent-primary rounded-full flex items-center justify-center">
                   <Scissors className="w-5 h-5 text-white" />
                 </div>
-                <h5 className="text-xl font-bold text-black">Pizzolotto Orianna</h5>
+                <h5 className="text-xl font-bold text-gray-300">Pizzolotto Orianna</h5>
               </div>
               <p className="text-gray-300">
                 Il tuo salone di bellezza di fiducia a Onara, Tombolo. 
@@ -484,7 +484,7 @@ const LandingPage = () => {
             </div>
             
             <div>
-              <h6 className="text-lg font-semibold mb-4 text-black">Servizi</h6>
+              <h6 className="text-lg font-semibold mb-4 text-gray-300">Servizi</h6>
               <ul className="space-y-2 text-gray-300">
                 <li>Tagli Donna e Uomo</li>
                 <li>Colorazione Capelli</li>
@@ -495,7 +495,7 @@ const LandingPage = () => {
             </div>
             
             <div>
-              <h6 className="text-lg font-semibold mb-4 text-black">Contatti</h6>
+              <h6 className="text-lg font-semibold mb-4 text-gray-300">Contatti</h6>
               <div className="space-y-2 text-gray-300">
                 <div>Via dei Carraresi 8 / 8B</div>
                 <div>35019 Tombolo (PD), Italia</div>
