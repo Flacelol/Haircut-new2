@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Phone, MapPin, Clock, Star, Scissors, Palette, Sparkles, CheckCircle, Car, CreditCard, Baby, Users } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
@@ -7,17 +7,36 @@ import { mockData } from '../utils/mock';
 
 const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null); // Реф для меню
+  const buttonRef = useRef(null); // Реф для кнопки бургера
+
+  // Эффект для закрытия при клике вне меню
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMenuOpen && 
+          menuRef.current && 
+          !menuRef.current.contains(event.target) &&
+          !buttonRef.current.contains(event.target))
+      {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isMenuOpen]);
 
   const getCurrentDay = () => {
-  const days = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
-  return days[new Date().getDay()];
-};
+    const days = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
+    return days[new Date().getDay()];
+  };
 
-const currentDay = getCurrentDay();
+  const currentDay = getCurrentDay();
 
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
+
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -54,6 +73,7 @@ const currentDay = getCurrentDay();
 
             {/* Mobile menu button */}
             <button 
+              ref={buttonRef}  // Добавьте этот ref
               className="md:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Menu"
@@ -68,7 +88,9 @@ const currentDay = getCurrentDay();
 
           {/* Mobile menu */}
           {isMenuOpen && (
-            <div className="md:hidden bg-white border-t border-black-200 py-4">
+            <div 
+              ref={menuRef}  // Добавьте этот ref
+              className="md:hidden bg-white border-t border-black-200 py-4">
               <div className="flex flex-col space-y-4">
                 <a 
                   href="#servizi" 
