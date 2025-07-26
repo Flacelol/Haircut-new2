@@ -142,48 +142,44 @@ const LandingPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                <div className="aspect-square relative">
-                  <img 
-                    src="https://customer-assets.emergentagent.com/job_pizzolotto-hair/artifacts/vn84d31a_haircut%201.png"
-                    alt="Taglio bob moderno con colpi di sole"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h4 className="text-xl font-semibold text-text-primary mb-3">
-                    Bob Moderno con Colpi di Sole
-                  </h4>
-                  <p className="text-text-subtle">
-                    Un elegante taglio bob con bellissimi colpi di sole che creano profondità 
-                    e movimento. Perfetto per chi desidera un look sofisticato e contemporaneo.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="aspect-[4/5] sm:aspect-square relative">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_pizzolotto-hair/artifacts/vn84d31a_haircut%201.png"
+                  alt="Taglio bob moderno con colpi di sole"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="p-4 sm:p-6">
+                <h4 className="text-lg sm:text-xl font-semibold text-text-primary mb-3">
+                  Bob Moderno con Colpi di Sole
+                </h4>
+                <p className="text-sm sm:text-base text-text-subtle">
+                  Un elegante taglio bob con bellissimi colpi di sole che creano profondità 
+                  e movimento. Perfetto per chi desidera un look sofisticato e contemporaneo.
+                </p>
+              </CardContent>
+            </Card>
 
-            <div className="space-y-8">
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                <div className="aspect-square relative">
-                  <img 
-                    src="https://customer-assets.emergentagent.com/job_pizzolotto-hair/artifacts/vvhp9n9t_haircut%202.png"
-                    alt="Capelli lunghi con balayage naturale"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h4 className="text-xl font-semibold text-text-primary mb-3">
-                    Balayage Naturale su Capelli Lunghi
-                  </h4>
-                  <p className="text-text-subtle">
-                    Splendidi capelli lunghi con tecnica balayage che dona un effetto naturale 
-                    e luminoso. I riflessi miele e dorati creano un risultato armonioso e raffinato.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="aspect-[4/5] sm:aspect-square relative">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_pizzolotto-hair/artifacts/vvhp9n9t_haircut%202.png"
+                  alt="Capelli lunghi con balayage naturale"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="p-4 sm:p-6">
+                <h4 className="text-lg sm:text-xl font-semibold text-text-primary mb-3">
+                  Balayage Naturale su Capelli Lunghi
+                </h4>
+                <p className="text-sm sm:text-base text-text-subtle">
+                  Splendidi capelli lunghi con tecnica balayage che dona un effetto naturale 
+                  e luminoso. I riflessi miele e dorati creano un risultato armonioso e raffinato.
+                </p>
+              </CardContent>
+            </Card>
           </div>
 
           <div className="text-center mt-12">
