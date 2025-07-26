@@ -44,7 +44,67 @@ const LandingPage = () => {
                 Prenota Ora
               </Button>
             </nav>
+
+            {/* Mobile menu button */}
+            <button 
+              className="md:hidden p-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <div className="w-6 h-6 flex flex-col justify-center space-y-1">
+                <div className="w-full h-0.5 bg-text-primary"></div>
+                <div className="w-full h-0.5 bg-text-primary"></div>
+                <div className="w-full h-0.5 bg-text-primary"></div>
+              </div>
+            </button>
           </div>
+
+          {/* Mobile menu */}
+          {isMenuOpen && (
+            <div className="md:hidden bg-white border-t border-gray-200 py-4">
+              <div className="flex flex-col space-y-4">
+                <a 
+                  href="#servizi" 
+                  className="text-text-primary hover:text-accent-primary transition-colors px-4"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Servizi
+                </a>
+                <a 
+                  href="#esempi" 
+                  className="text-text-primary hover:text-accent-primary transition-colors px-4"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Esempi
+                </a>
+                <a 
+                  href="#chi-siamo" 
+                  className="text-text-primary hover:text-accent-primary transition-colors px-4"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Chi Siamo
+                </a>
+                <a 
+                  href="#recensioni" 
+                  className="text-text-primary hover:text-accent-primary transition-colors px-4"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Recensioni
+                </a>
+                <a 
+                  href="#contatti" 
+                  className="text-text-primary hover:text-accent-primary transition-colors px-4"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contatti
+                </a>
+                <div className="px-4">
+                  <Button className="bg-accent-primary hover:bg-accent-primary/90 text-white w-full">
+                    Prenota Ora
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </header>
 
