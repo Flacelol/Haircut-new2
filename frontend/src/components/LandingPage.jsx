@@ -28,6 +28,9 @@ const LandingPage = () => {
               <a href="#servizi" className="text-text-primary hover:text-accent-primary transition-colors">
                 Servizi
               </a>
+              <a href="#esempi" className="text-text-primary hover:text-accent-primary transition-colors">
+                Esempi
+              </a>
               <a href="#chi-siamo" className="text-text-primary hover:text-accent-primary transition-colors">
                 Chi Siamo
               </a>
