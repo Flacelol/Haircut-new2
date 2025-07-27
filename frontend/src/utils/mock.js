@@ -5,7 +5,7 @@ export const mockData = {
     {
       name: "Taglio Donna",
       description: "Tagli moderni e classici personalizzati per ogni tipo di capello e forma del viso.",
-      price: "€35-50",
+      price: "€50",
       duration: "45 min",
       icon: <Scissors className="w-6 h-6 text-accent-primary" />
     },
