@@ -64,7 +64,7 @@ const LandingPage = () => {
                 Recensioni
               </a>
               <a href="#contatti" className="text-text-primary hover:text-accent-primary transition-colors">
-                Contatti
+                Contatti e Orari
               </a>
               <div className="px-4">
                 <a 
@@ -133,7 +133,7 @@ const LandingPage = () => {
                   className="text-text-primary hover:text-accent-primary transition-colors px-4"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Contatti
+                  Contatti e Orari
                 </a>
                <div className="px-4">
                   <a 
