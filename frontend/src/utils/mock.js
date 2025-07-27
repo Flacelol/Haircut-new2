@@ -12,7 +12,7 @@ export const mockData = {
     {
       name: "Taglio Uomo",
       description: "Tagli maschili professionali, dal classico al moderno, con attenzione ai dettagli.",
-      price: "€25-35",
+      price: "€25",
       duration: "30 min",
       icon: <Scissors className="w-6 h-6 text-accent-primary" />
     },
